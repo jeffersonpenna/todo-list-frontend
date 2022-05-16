@@ -16,12 +16,17 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>TODO List</h1>
-        <nav>
-          {!auth.user && <Link to="/">Login</Link>}
-          {auth.user && <Link to="/home">Home</Link>}
-          
-          {auth.user && <a href="#logout" onClick={handleLogout}>Logout</a>}
+        <nav className="menu">
+          <ul>
+            <li>TODO List</li>
+            {auth.user &&
+              <li><a href="#">Jefferson Penna</a>
+                <ul>
+                  <li><a href="#logout" onClick={handleLogout}>Logout</a></li>
+                </ul>
+              </li>
+            }
+          </ul>
         </nav>
       </header>
       <Routes>

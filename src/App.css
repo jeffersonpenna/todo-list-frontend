@@ -1,13 +1,48 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-nav a {
-  color: #000;
-  display: inline-block;
-  margin: 0 10px;
+.menu {
+  background-color: #aaa;
+  color: #444
 }
 
-nav a:hover {
+.menu ul {
+  list-style-type: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  position: relative
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li a {
   text-decoration: none;
+  color: #444;
+  padding: 10px;
+}
+
+
+.menu ul ul {
+  background-color: #aaa;
+  color: #444;
+  display: none;
+  left: 0;
+  position: absolute;
+}
+
+.menu ul li:hover ul {
+  display: block;
+}
+
+.menu ul ul {
+  min-width: 150px
+}
+
+.menu ul ul li a {
+  display: block;
 }
